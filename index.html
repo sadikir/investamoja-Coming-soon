@@ -1,16 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <meta name="viewport" content="width=device-width" initial-scale="1.0">
+  <title>Investamoja: Coming soon</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
+<!-- video -->
+<div class="container">
+  <div class="main-video">
+    <div class="video">
+      <video src="video1.mp4" autoplay controls></video>
+      <h3 class="title">#1 2min Welcome to Investamoja</h3>
+    </div>
+  </div>
+  <div class="video-list">
+    <div class="vid active">
+      <video src="video1.mp4" ></video>
+      <h3 class="title">#1 2min Welcome to Investamoja</h3>
+    </div>
+    <div class="vid">
+      <video src="video2.mp4" ></video>
+      <h3 class="title">#2 2min Welcome to Investamoja</h3>
+    </div>
+    <div class="vid">
+      <video src="video3.mp4" ></video>
+      <h3 class="title">#3 2min Welcome to Investamoja</h3>
+    </div>
+    <div class="vid">
+      <video src="video4.mp4" ></video>
+      <h3 class="title">#4 2min Welcome to Investamoja</h3>
+    </div>
+
+  </div>
+</div>
+<script>
+  let listVideo = document.querySelectorAll('.video-list .vid');
+  let mainVideo = document.querySelector('.main-video video');
+  let title = document.querySelector('.main-video .title');
+  listVideo.forEach(video =>{
+    video.onclick = () =>{
+      listVideo.forEach(vid => vid.classList.remove('active'));
+      video.classList.add('active');
+      if(video.classList.contains('active')){
+        let src = video.children[0].getAttribute('src');
+        mainVideo.src = src;
+        let text = video.children[1].innerHTML;
+        title.innerHTML = text;
+      }
+    }
+  })
+</script>
 <body>
-  Hello world
-  <script src="script.js"></script>
+
 </body>
 
 </html>
