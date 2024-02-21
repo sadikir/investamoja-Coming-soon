@@ -10,9 +10,16 @@
 body {
   background-color: #eee;
 }
+.logo{
+  width:100%;
+  display:flex;
+  align-items: center;
+}
 .logo img {
   /*add blend mode directly*/
-  mix-blend-mode: multiply;   
+  mix-blend-mode: multiply; 
+  margin:auto;
+  width:250px;
 }
 
 .container {
