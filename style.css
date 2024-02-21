@@ -119,3 +119,17 @@ body {
     
   }
 }
+video::-webkit-media-controls-mute-button {
+  display:none;
+}
+video::-webkit-media-controls-seek-back-button{
+  display:none;
+}
+video::-webkit-media-controls-seek-forward-button{
+  display:none;
+}
+video::-webkit-media-controls-play-button{
+  width:20px;
+  height:20px;
+  background: rgba(41, 128, 185, 0.6)
+}
