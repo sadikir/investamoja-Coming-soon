@@ -300,7 +300,6 @@ video::-webkit-media-controls-seek-forward-button {
   max-width: 920px;
   width: 100%;
   margin: 0 auto;
-  padding-top:20px;
 }
 
 #conference-timeline .timeline-start,
@@ -317,6 +316,8 @@ video::-webkit-media-controls-seek-forward-button {
   width: 100%;
   text-align: center;
   margin: 0 auto;
+  z-index:99999 !important;
+  position:relative;
 }
 
 #conference-timeline .conference-center-line {
@@ -326,8 +327,9 @@ video::-webkit-media-controls-seek-forward-button {
   top: 0;
   left: 50%;
   margin-left: -2px;
-  background: #00b0bd;
-  z-index: -1;
+  background: red;
+  z-index:1;
+ 
 }
 
 #conference-timeline .conference-timeline-content {
@@ -348,7 +350,10 @@ video::-webkit-media-controls-seek-forward-button {
   max-width: 44%;
   width: 100%;
 }
-
+.content-heading{
+  font-size:20px;
+  font-weight: 1000;
+}
 .timeline-article .timeline-author {
   display: block;
   font-weight: 400;
@@ -388,7 +393,7 @@ video::-webkit-media-controls-seek-forward-button {
 }
 
 .timeline-article .content-left-container {
-  float: left;
+  float:left;
 }
 
 .timeline-article .content-right-container {
@@ -424,6 +429,7 @@ video::-webkit-media-controls-seek-forward-button {
   color: #fff;
   border-radius: 100%;
   background: #00b0bd;
+  z-index:2;
 }
 
 .timeline-article .meta-date .date,
@@ -434,7 +440,7 @@ video::-webkit-media-controls-seek-forward-button {
 }
 
 .timeline-article .meta-date .date {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 40px;
 }
 
@@ -456,6 +462,7 @@ video::-webkit-media-controls-seek-forward-button {
   #conference-timeline .conference-center-line {
     margin-left: 0;
     left: 50px;
+    background-color: red;
   }
 
   .timeline-article .meta-date {
